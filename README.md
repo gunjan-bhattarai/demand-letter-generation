@@ -5,7 +5,7 @@ Two MCP servers were ultimately created - one for querying the database for case
 
 Sample demand letters (v1 through v4 are not actually improved versions but just simply just four testing runs I conducted with my setup) are included in the sample_demand_letters directory.
 
-For setup, install the requirements in requirements.txt, download the files below that apply to your implementation strategy as well as gemini-cli.
+For setup, install the requirements in requirements.txt, download the files below that apply to your implementation strategy as well as gemini-cli. In my case, that would involve first running prepare_for_faiss.py to convert the PDFs to txt, rag_with_gemini.py for an initial test to make sure that RAG was working, adding settings.json, server.py, gemini_rag_server.py, database_setup_sample_post.sql to ensure MCP support for gemini-cli, and then running gemini-cli for testing.
 
 Here is what each included file is for.
 
