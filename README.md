@@ -23,7 +23,7 @@ rag_with_gemini.py - Modified RAG script that uses Gemini instead of Together.ai
 
 rag.py - RAG script that uses Together.ai models for LLM and offers the chioce between an open-source Huggingface model (yuriyvnv/legal-bge-m3) to offer embeddings specifically catering to the legal domain (see note on embedding providers at the end). Includes 20 sample questions at the end for testing.
 
-requirements.txt - I ran pip freeze > requirements.txt on what libraries ended up being downloaded in my virtual environment during this project.
+requirements.txt - I ran pip freeze > requirements.txt on what libraries ended up being downloaded in my virtual environment during this project. I used Python 3.10.18.
 
 server.py - MCP server for querying database_setup_sample_post.sql.
 
