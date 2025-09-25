@@ -16,7 +16,7 @@
       }
     },
     "gemini-rag-legal-docs": {
-      "command": "/Users/gunjani/Documents/legal_ai_challenge/smart_advocate/bin/python",
+      "command": "<your_python_or_virtual_environment_path>/bin/python",
       "args": [
         "<path_to_your_rag_server_using_gemini>/gemini_rag_server.py"
       ],
