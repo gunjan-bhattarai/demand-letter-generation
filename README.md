@@ -1,5 +1,5 @@
 # demand-letter-generation
-Demand letter generation using MCP servers and gemini-cli (with RAG implementation as well).
+Demand letter generation using MCP servers and gemini-cli (with RAG implementation and citation tracking as well).
 
 Two MCP servers were ultimately created - one for querying the database for case details, plaintiff info, defendant info, etc. and the other to conduct traditional retrieval augmented generation (RAG). I ended up converting my RAG code into an MCP server in order to allow gemini-cli (my MCP client of choice for this project) to access it. However, Gemini repeatedly preferred to use its own ReadFile tool in order to acquire the needed information, so I ended up testing the RAG capability with gemini-cli separately (e.g., asking it directly to answer questions with RAG).
 
