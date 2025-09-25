@@ -1,0 +1,31 @@
+{
+  "selectedAuthType": "oauth-personal",
+  "mcpServers": {
+    "legal-cases": {
+      "command": "<your_python_or_virtual_environment_path>/bin/python",
+      "args": [
+        "<path_to_your_database_querying_mcp_server>/server.py"
+      ],
+      "enabled": true,
+      "env": {
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_NAME": "legal_case_management",
+        "DB_USER": "<username>",
+        "DB_PASSWORD": "<password>"
+      }
+    },
+    "gemini-rag-legal-docs": {
+      "command": "/Users/gunjani/Documents/legal_ai_challenge/smart_advocate/bin/python",
+      "args": [
+        "<path_to_your_rag_server_using_gemini>/gemini_rag_server.py"
+      ],
+      "enabled": true,
+      "env": {
+        "GOOGLE_API_KEY": "<your_google_api_key>",
+        "DATA_DIR": "<path_to_your_rag_documents>/sample_docs/2024-PI-001/",
+        "EMBEDDING_PROVIDER": "gemini"
+      }
+    }
+  }
+}
