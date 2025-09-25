@@ -15,9 +15,9 @@ prepare_for_faiss.py - Preprocessing code that converted PDFs to .txt so I could
 
 rag_server.py - MCP server for RAG that used Together.ai for LLM (I defaulted to GLM-4.5-Air, but this wasn't based on optimality - I just wanted to test an open source model to validate my approach didn't just work for proprietary models).
 
-rag_with_doc_classification.py - Modified RAG script that adds document classification as well as some specialized domain-based chunking (differing sizes of chunks based on domain classification and adding headers of documents to chunks). Performed around or slightly worse than my standard chunking approach so I opted to just use that instead for the MCP server. Includes 20 sample questions at the end for testing.
+rag_with_doc_classification.py - Modified RAG script that adds document classification as well as some specialized domain-based chunking (differing sizes of chunks based on domain classification and adding headers of documents to chunks). Performed around or slightly worse than my standard chunking approach so I opted to just use that instead for the MCP server. Includes 20 sample questions at the end for testing. Includes 20 sample questions at the end for testing.
 
-rag_with_gemini.py - Modified RAG script that uses Gemini instead of Together.ai models. Continues to offer the use of an open-source Huggingface model to offer embeddings specifically catering to the legal domain (see note on embedding providers at the end).
+rag_with_gemini.py - Modified RAG script that uses Gemini instead of Together.ai models. Continues to offer the use of an open-source Huggingface model to offer embeddings specifically catering to the legal domain (see note on embedding providers at the end). Includes 20 sample questions at the end for testing.
 
 requirements.txt - I ran pip freeze > requirements.txt on what libraries ended up being downloaded in my virtual environment during this project.
 
