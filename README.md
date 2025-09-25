@@ -7,33 +7,15 @@ Sample demand letters (v1 through v4 are not actually improved versions but just
 
 Here is what each included file is for.
 
-database_setup_sample_post.sql - This is a modified version of the provided SQL database 
-10 minutes ago
-gemini_rag_server.py
-Add files via upload
-10 minutes ago
-prepare_for_faiss.py
-Add files via upload
-10 minutes ago
-rag_server.py
-Add files via upload
-10 minutes ago
-rag_with_doc_classification.py
-Add files via upload
-10 minutes ago
-rag_with_gemini.py
-Add files via upload
-10 minutes ago
-requirements.txt
-Add files via upload
-4 minutes ago
-server.py
-Add files via upload
-10 minutes ago
-settings.json
-Update settings.json
-
-
+database_setup_sample_post.sql - This is a modified version of the provided SQL database to remove syntax errors when I tried to query it with PostgreSQL.
+gemini_rag_server.py - MCP server for RAG that used Gemini for LLM
+prepare_for_faiss.py - Preprocessing code that converted PDFs to .txt so I could chunk them with FAISS (Facebook AI Similarity Search, which is what many vector databases are built on top of)
+rag_server.py - MCP server for RAG that used Together.ai for LLM (I defaulted to GLM-4.5-Air, but this wasn't based on optimality - I just wanted to test an open source model to validate my approach didn't just work for proprietary models).
+rag_with_doc_classification.py - Modified RAG script that adds document classification as well as some specialized domain-based chunking (differing sizes of chunks based on domain classification and adding headers of documents to chunks). Performed around or slightly worse than my standard chunking approach so I opted to just use that instead for the MCP server. Includes 20 sample questions at the end for testing.
+rag_with_gemini.py - Modified RAG script that uses Gemini instead of Together.ai models. Continues to offer the use of an open-source Huggingface model to offer embeddings specifically catering to the legal domain (see note on embedding providers at the end).
+requirements.txt - I ran pip freeze > requirements.txt on what libraries ended up being downloaded in my virtual environment during this project.
+server.py - MCP server for querying database_setup_sample_post.sql.
+settings.json - gemini-cli's settings.json when using the Gemini RAG server.
 
 Note on embedding providers.
 - Use EMBEDDING_PROVIDER="huggingface" if you want to use specialized embeddings
