@@ -25,6 +25,10 @@ server.py - MCP server for querying database_setup_sample_post.sql.
 
 settings.json - gemini-cli's settings.json when using the Gemini RAG server.
 
+To run, move the settings.json of choice to ~/.gemini/settings.json and run the command "gemini" (assuming you have downloaded the gemini-cli already). You can test the approach with the following prompt:
+
+"Generate a demand letter for Case 2024-PI-001. Include all medical expenses, lost wages, and pain and suffering damages. Reference specific medical findings from Dr. Jones and cite the police report for liability determination. The demand should be professional and include proper legal citations."
+
 Note on embedding providers.
 - Use EMBEDDING_PROVIDER="huggingface" if you want to use specialized embeddings
 - Use EMBEDDING_PROVIDER="together" if you want to use standard open-source (but optimized for inference) embeddings with Together.ai
