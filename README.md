@@ -5,11 +5,13 @@ Two MCP servers were ultimately created - one for querying the database for case
 
 Sample demand letters (v1 through v4 are not actually improved versions but just simply just four testing runs I conducted with my setup) are included in the sample_demand_letters directory.
 
+For setup, install the requirements in requirements.txt, download the files below that apply to your implementation strategy as well as gemini-cli.
+
 Here is what each included file is for.
 
 database_setup_sample_post.sql - This is a modified version of the provided SQL database to remove syntax errors when I tried to query it with PostgreSQL.
 
-gemini_rag_server.py - MCP server for RAG that used Gemini for LLM
+gemini_rag_server.py - MCP server for RAG that used Gemini for LLM (I used gemini-2.5-flash here but you can also switch to Pro or Flash Lite)
 
 prepare_for_faiss.py - Preprocessing code that converted PDFs to .txt so I could chunk them with FAISS (Facebook AI Similarity Search, which is what many vector databases are built on top of)
 
